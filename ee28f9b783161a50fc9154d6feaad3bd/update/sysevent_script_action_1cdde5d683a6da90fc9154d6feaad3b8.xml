@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sysevent_script_action">
+    <sysevent_script_action action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <condition_script/>
+        <description/>
+        <event_name>x_1461179_disk_sho.lowCountDiscRecords</event_name>
+        <name>Send emal to admin</name>
+        <order>100</order>
+        <script><![CDATA[// write(GlideRecord record, String fileName, String contentType, String content)
+var attachment = new GlideSysAttachment();
+// The GlideSysAttachment API provides a way to handle attachments.
+// Content is returned as a string,  when getContent() is called.
+// Attachments (sys_attachment) - 
+// Attachment Documents (sys_attachment_doc).
+
+// sys_attachment table stores file's meta information including, file name, size & type.
+// Sys_attachment_doc table stores files in the following way.
+
+//set up inputs
+// var rec = new GlideRecord('x_1461179_disk_sho_disc');
+// rec.get('78cacad683a21e90fc9154d6feaad3d9');
+// var fileName = 'Demo.txt';
+// var contentType = 'doc.txt';
+// var content = 'The text that is stored inside my file JD ' + current.number + ' with count ' + current.u_count;
+
+// var agr = attachment.write(rec, fileName, contentType, content);
+// gs.info('JD The attachment sys_id is: ' + agr);
+
+// create mail (don't need to do this but was just part of my requirement so thought i'd include it)
+
+
+var mail = new GlideEmailOutbound();
+
+// JohanD@guerrillamail.com
+mail.addRecipient('user@domain.com');
+
+
+mail.setSubject('Test CSV attachment');
+
+
+mail.setBody('Test');
+
+
+mail.save();
+
+
+// get the mail gliderecord (this can be any gliderecord you want to attach your csv to, doesn't have to be an email)
+
+
+var mailGr = new GlideRecord('sys_email');
+
+
+mailGr.get(mail.sysID);
+
+
+// create the attachment
+
+
+var csvData = '"Header 1","Header 2"\r\n"Data 1","Data 2"\r\n';
+
+
+var sa = new GlideSysAttachment();
+
+
+// this function has the following required parameters (GlideRecord to attach file to, filename, content type, file data)
+
+
+// it will return the sysId of the sys_attachment record
+
+
+sa.write(mailGr, 'test.csv', 'application/csv', csvData);
+ ]]></script>
+        <synchronous>false</synchronous>
+        <sys_class_name>sysevent_script_action</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-20 15:35:26</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>1cdde5d683a6da90fc9154d6feaad3b8</sys_id>
+        <sys_mod_count>17</sys_mod_count>
+        <sys_name>Send emal to admin</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Disc shop" source="x_1461179_disk_sho">ee28f9b783161a50fc9154d6feaad3bd</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Disc shop">ee28f9b783161a50fc9154d6feaad3bd</sys_scope>
+        <sys_update_name>sysevent_script_action_1cdde5d683a6da90fc9154d6feaad3b8</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-25 19:46:04</sys_updated_on>
+    </sysevent_script_action>
+    <sys_es_latest_script action="INSERT_OR_UPDATE">
+        <id>1cdde5d683a6da90fc9154d6feaad3b8</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-20 15:35:25</sys_created_on>
+        <sys_id>be75f596832ada90fc9154d6feaad3d1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-20 15:35:25</sys_updated_on>
+        <table>sysevent_script_action</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+</record_update>

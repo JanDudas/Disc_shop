@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update>
-    <sys_documentation element="u_price" label="Price of 1 pcs" language="en" table="x_1461179_disk_sho_disc">
+    <sys_documentation element="u_performance" label="Performance" language="en" table="x_1461179_disk_sho_disc">
         <sys_documentation action="INSERT_OR_UPDATE">
-            <element>u_price</element>
+            <element>u_performance</element>
             <help/>
             <hint/>
-            <label>Price of 1 pcs</label>
+            <label>Performance</label>
             <language>en</language>
             <name>x_1461179_disk_sho_disc</name>
-            <plural>Price of 1 pcs</plural>
+            <plural>Performances</plural>
             <sys_class_name>sys_documentation</sys_class_name>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2024-12-15 21:58:28</sys_created_on>
-            <sys_mod_count>2</sys_mod_count>
-            <sys_name>Price of 1 pcs</sys_name>
+            <sys_created_on>2024-12-17 20:45:22</sys_created_on>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Performance</sys_name>
             <sys_package display_value="Disc shop" source="x_1461179_disk_sho">ee28f9b783161a50fc9154d6feaad3bd</sys_package>
             <sys_policy/>
             <sys_scope display_value="Disc shop">ee28f9b783161a50fc9154d6feaad3bd</sys_scope>
-            <sys_update_name>sys_documentation_x_1461179_disk_sho_disc_u_price_en</sys_update_name>
+            <sys_update_name>sys_documentation_x_1461179_disk_sho_disc_u_performance_en</sys_update_name>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2024-12-17 20:08:49</sys_updated_on>
+            <sys_updated_on>2024-12-17 20:45:22</sys_updated_on>
             <url/>
             <url_target/>
         </sys_documentation>

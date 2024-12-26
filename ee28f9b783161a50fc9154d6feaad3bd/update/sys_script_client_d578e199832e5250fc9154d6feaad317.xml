@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description/>
+        <field>u_mark</field>
+        <global>true</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name>Disc  Car  Model Options</name>
+        <order/>
+        <script><![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+    if (newValue === '') {
+        return;
+    }
+
+    var model = g_form.getValue('u_modell');
+
+    g_form.clearOptions('u_modell');
+
+    switch (true) {
+        case (newValue == 0):
+            g_form.addOption('u_modell', 0, 'Choose Mark of an Car');
+            break;
+        case (newValue == 1): // ALfa Romeo            
+            g_form.addOption('u_modell', 13, '159 (2005 - 2011)');
+            g_form.addOption('u_modell', 14, 'GT ( 2004 - 2009 )');
+            g_form.addOption('u_modell', 15, 'MITO ( 2010 - 2018 )');
+            break;
+
+        case (newValue == 2): // Audi            
+            g_form.addOption('u_modell', 25, 'Q2 (2016 - today)');
+            g_form.addOption('u_modell', 26, 'Q3 (2019 - today)');
+            g_form.addOption('u_modell', 27, 'Q4 e-tron ( 2021 - today )');
+            break;
+
+        case (newValue == 3): // BMW
+            g_form.addOption('u_modell', 31, '1 (2019 - 2024 )');
+            g_form.addOption('u_modell', 32, '2 Coupe ( 2014 -2021 )');
+            g_form.addOption('u_modell', 33, '3 Cabrio ( 2007 - 2014 )');
+            break;
+
+        case (newValue == 4): //  Citroen
+            g_form.addOption('u_modell', 41, 'C1 5door (2005 - 2014)');
+            g_form.addOption('u_modell', 42, 'C2 (2010 - 2014)');
+            g_form.addOption('u_modell', 43, 'C3 (2014 - 2022)');
+            break;
+
+        case (newValue == 5): //  SEAT
+            g_form.addOption('u_modell', 51, 'Cordoba ( 2002 - 2007 )');
+            g_form.addOption('u_modell', 52, 'Exeo ( 2009 - 2013 )');
+            g_form.addOption('u_modell', 53, 'Ibiza (2008 - 2017)');
+            break;
+        case (newValue == 6): // SUZUKI
+            g_form.addOption('u_modell', 61, 'Ignis ( 2017 - 2024 )');
+            g_form.addOption('u_modell', 62, 'Liana Kombi (2001 - 2007)');
+            g_form.addOption('u_modell', 63, 'SWIFT (20017 - 2024)');
+            break;
+        default:
+            alert("none disc");
+            break;
+    }
+
+
+    // If the form is loading and it is not a new record, set the u_what_needed value to the
+    // value from the record before it was loaded
+    if (isLoading && !g_form.isNewRecord()) {
+        g_form.setValue('u_modell', model);
+    }
+    //Type appropriate comment here, and begin script below
+
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-17 13:03:02</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>d578e199832e5250fc9154d6feaad317</sys_id>
+        <sys_mod_count>23</sys_mod_count>
+        <sys_name>Disc  Car  Model Options</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Disc shop" source="x_1461179_disk_sho">ee28f9b783161a50fc9154d6feaad3bd</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Disc shop">ee28f9b783161a50fc9154d6feaad3bd</sys_scope>
+        <sys_update_name>sys_script_client_d578e199832e5250fc9154d6feaad317</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-17 21:00:22</sys_updated_on>
+        <table>x_1461179_disk_sho_disc</table>
+        <type>onChange</type>
+        <ui_type>0</ui_type>
+        <view/>
+    </sys_script_client>
+</record_update>

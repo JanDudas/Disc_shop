@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sysevent_script_action">
+    <sysevent_script_action action="INSERT_OR_UPDATE">
+        <active>false</active>
+        <condition_script/>
+        <description/>
+        <event_name>x_1461179_disk_sho.lowCountDiscRecords</event_name>
+        <name>Fetching Contents from TEXT File Attache</name>
+        <order>100</order>
+        <script><![CDATA[///var tableName = 'incident';
+// https://www.servicenow.com/community/developer-articles/reading-attachment-contents-copying-attachment-attachment/ta-p/2313410
+
+// var sysIdOfRecord = '78cacad683a21e90fc9154d6feaad3d9';
+// var fileNameWithoutExtension = 'Demo'; //Full file name: example text doc.txt
+
+
+
+// var grWithAttachment = new GlideRecord(tableName);
+// current.get(sysIdOfRecord);
+
+// var gsa = new GlideSysAttachment();
+//ONLY works in global
+// var dataInTextFile = gsa.get(current, fileNameWithoutExtension);
+
+// gs.print("Information Available in Text File: " + dataInTextFile);
+
+
+ //Fetching Contents from TEXT File Attached to your record:
+
+var tableName = 'x_1461179_disk_sho_disc';
+var sysIdOfRecord = '54c5bd96836ada90fc9154d6feaad36f';
+var fileNameWithoutExtension = 'Demo'; //Full file name: example text doc.txt
+
+var grWithAttachment = new GlideRecord(tableName);
+grWithAttachment.get(sysIdOfRecord);
+
+var gsa = new GlideSysAttachment();
+//ONLY works in global
+var dataInTextFile = gsa.get(grWithAttachment, fileNameWithoutExtension);
+
+gs.print("Information Available in Text File JD: "+dataInTextFile);]]></script>
+        <synchronous>false</synchronous>
+        <sys_class_name>sysevent_script_action</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-20 17:07:06</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>981986d283621e90fc9154d6feaad33a</sys_id>
+        <sys_mod_count>11</sys_mod_count>
+        <sys_name>Fetching Contents from TEXT File Attache</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Disc shop" source="x_1461179_disk_sho">ee28f9b783161a50fc9154d6feaad3bd</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Disc shop">ee28f9b783161a50fc9154d6feaad3bd</sys_scope>
+        <sys_update_name>sysevent_script_action_981986d283621e90fc9154d6feaad33a</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-25 22:45:04</sys_updated_on>
+    </sysevent_script_action>
+    <sys_es_latest_script action="INSERT_OR_UPDATE">
+        <id>981986d283621e90fc9154d6feaad33a</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-20 17:07:05</sys_created_on>
+        <sys_id>ad7a0a9e83621e90fc9154d6feaad339</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-20 17:07:05</sys_updated_on>
+        <table>sysevent_script_action</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+</record_update>

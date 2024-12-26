@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sysevent_script_action">
+    <sysevent_script_action action="DELETE">
+        <active>false</active>
+        <condition_script/>
+        <description/>
+        <event_name>x_1461179_disk_sho.lowCountDiscRecords</event_name>
+        <name>Update comments</name>
+        <order>100</order>
+        <script><![CDATA[// Set the record priority to 2 - High
+
+/// aj event nielen current
+current.u_comments= "Chod do prdele.";
+// current.u_notes = "Record closed because it was too far past the Due date. " ;
+// current.u_count = 8;
+// Update the record in the database
+ 
+current.update();]]></script>
+        <synchronous>false</synchronous>
+        <sys_class_name>sysevent_script_action</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-25 18:41:27</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>643f0408833e9654fc9154d6feaad308</sys_id>
+        <sys_mod_count>10</sys_mod_count>
+        <sys_name>Update comments</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Disc shop" source="x_1461179_disk_sho">ee28f9b783161a50fc9154d6feaad3bd</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Disc shop">ee28f9b783161a50fc9154d6feaad3bd</sys_scope>
+        <sys_update_name>sysevent_script_action_643f0408833e9654fc9154d6feaad308</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-25 19:44:59</sys_updated_on>
+    </sysevent_script_action>
+    <sys_es_latest_script action="DELETE">
+        <id>643f0408833e9654fc9154d6feaad308</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-25 18:41:26</sys_created_on>
+        <sys_id>2c0054c4833e9654fc9154d6feaad309</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-25 18:41:26</sys_updated_on>
+        <table>sysevent_script_action</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Disc shop">ee28f9b783161a50fc9154d6feaad3bd</application>
+        <file_path/>
+        <instance_id>e9ec096d1bdef1107d9d2f8dee4bcb4b</instance_id>
+        <instance_name>dev203221</instance_name>
+        <name>sysevent_script_action_643f0408833e9654fc9154d6feaad308</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sysevent_script_action"&gt;&lt;sysevent_script_action action="INSERT_OR_UPDATE"&gt;&lt;active&gt;false&lt;/active&gt;&lt;condition_script/&gt;&lt;description/&gt;&lt;event_name&gt;x_1461179_disk_sho.lowCountDiscRecords&lt;/event_name&gt;&lt;name&gt;Update comments&lt;/name&gt;&lt;order&gt;100&lt;/order&gt;&lt;script&gt;&lt;![CDATA[// Set the record priority to 2 - High
+
+/// aj event nielen current
+current.u_comments= "Chod do prdele.";
+// current.u_notes = "Record closed because it was too far past the Due date. " ;
+// current.u_count = 8;
+// Update the record in the database
+ 
+current.update();]]&gt;&lt;/script&gt;&lt;synchronous&gt;false&lt;/synchronous&gt;&lt;sys_class_name&gt;sysevent_script_action&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2024-12-25 18:41:27&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;643f0408833e9654fc9154d6feaad308&lt;/sys_id&gt;&lt;sys_mod_count&gt;10&lt;/sys_mod_count&gt;&lt;sys_name&gt;Update comments&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="Disc shop" source="x_1461179_disk_sho"&gt;ee28f9b783161a50fc9154d6feaad3bd&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Disc shop"&gt;ee28f9b783161a50fc9154d6feaad3bd&lt;/sys_scope&gt;&lt;sys_update_name&gt;sysevent_script_action_643f0408833e9654fc9154d6feaad308&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2024-12-25 19:44:59&lt;/sys_updated_on&gt;&lt;/sysevent_script_action&gt;&lt;sys_es_latest_script action="INSERT_OR_UPDATE"&gt;&lt;id&gt;643f0408833e9654fc9154d6feaad308&lt;/id&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2024-12-25 18:41:26&lt;/sys_created_on&gt;&lt;sys_id&gt;2c0054c4833e9654fc9154d6feaad309&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2024-12-25 18:41:26&lt;/sys_updated_on&gt;&lt;table&gt;sysevent_script_action&lt;/table&gt;&lt;use_es_latest&gt;true&lt;/use_es_latest&gt;&lt;/sys_es_latest_script&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-478608201</payload_hash>
+        <record_name>Update comments</record_name>
+        <reverted_from/>
+        <source>d9c7d1d183665250fc9154d6feaad3a4</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-25 19:44:59</sys_created_on>
+        <sys_id>9b8e90cc83b2d654fc9154d6feaad3a6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>193ff59dbc20000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-25 19:44:59</sys_updated_on>
+        <type>Script Action</type>
+        <update_guid>138e90cc35b2d654b23233b59a366aa6</update_guid>
+        <update_guid_history>138e90cc35b2d654b23233b59a366aa6:-478608201,087e544c3eb2d654af3824b0f029299c:-48490495,ce5c100c6eb2d65495dae23106e9c48b:1390954451,a6eb144c5072d654425219a48e9957c5:-1267165144,5cd890802f72d65425f691672d642dd7:1746183240,c35890888932d654422c67d7589073fd:1893086689,713790007a32d654cc2ec2e14b1608db:-1333107235,2227dc806d32d654357714f4b7d70187:1454203906,35c2d4041abe96540e9a6ab200e9fc40:662113087,dc205408c07e9654f5bd32778efaa1cc:1906786284,bc0014c4727e96542c8499288b208e12:752983476</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-25 19:48:36</sys_created_on>
+        <sys_db_object display_value="" name="sysevent_script_action">sysevent_script_action</sys_db_object>
+        <sys_id>059a4e13a19748dc95414fd1cc2ad2d1</sys_id>
+        <sys_metadata>643f0408833e9654fc9154d6feaad308</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Update comments</sys_name>
+        <sys_package display_value="Disc shop" source="x_1461179_disk_sho">ee28f9b783161a50fc9154d6feaad3bd</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Disc shop">ee28f9b783161a50fc9154d6feaad3bd</sys_scope>
+        <sys_scope_delete display_value="">0fdb8dfa0cfa4d2c84d33507d7f9a971</sys_scope_delete>
+        <sys_update_name>sysevent_script_action_643f0408833e9654fc9154d6feaad308</sys_update_name>
+        <sys_update_version display_value="sysevent_script_action_643f0408833e9654fc9154d6feaad308">9b8e90cc83b2d654fc9154d6feaad3a6</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-25 19:48:36</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
