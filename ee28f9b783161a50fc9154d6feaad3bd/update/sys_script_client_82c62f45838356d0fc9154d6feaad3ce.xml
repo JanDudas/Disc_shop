@@ -8,7 +8,7 @@
         <global>true</global>
         <isolate_script>true</isolate_script>
         <messages/>
-        <name>Disc Car Performance Options</name>
+        <name>BMW Disc  Model Options</name>
         <order/>
         <script><![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
     if (newValue === '') {
@@ -22,55 +22,42 @@
         case (newValue == 0):
             g_form.addOption('u_performance', 0, 'Select Model of the Car');
             break;
-        case (newValue == 11 || newValue == 12):
+        case (newValue == 31):
             g_form.addOption('u_performance', 1, '1.6  (56 kW)');
             g_form.addOption('u_performance', 2, '1.9 TDi ( 62 kW )');
             // (method) g_form.addOption(fieldName: string, choiceValue: string, choiceLabel: string): void
             break;
-        case (newValue == 13 || newValue == 14):
-            g_form.addOption('u_performance', 1, '1.6  (56 kW)');
-            g_form.addOption('u_performance', 2, '1.9 TDi ( 62 kW )');
-            break;
-        case (newValue == 15):
+
+        case (newValue == 32):
             g_form.addOption('u_performance', 3, '2.3 TDi (80 kW)');
             g_form.addOption('u_performance', 4, '1.6 JTDM ( 110 kW )');
             g_form.addOption('u_performance', 5, 'JTDM ( 130 kW )');
             break;
-
-        case (newValue == 21 || newValue == 22 || newValue == 23):
+        case (newValue == 33):
+            g_form.addOption('u_performance', 6, 'JDM (95 kW)');
             g_form.addOption('u_performance', 7, '2JTS ( 122 kW )');
             g_form.addOption('u_performance', 8, '2.4 JTD ( 130 kW)');
+
+            break;
+
+        case (newValue == 41):
             g_form.addOption('u_performance', 9, '2.6 JTVS (135 kW)');
-            break;
-
-        case (newValue == 24 || newValue == 25 || newValue == 26):
             g_form.addOption('u_performance', 10, '2.8 V6 ( 100 kW )');
             g_form.addOption('u_performance', 11, '1.8  MPI (103 kW )');
+
+            // (method) g_form.addOption(fieldName: string, choiceValue: string, choiceLabel: string): void
             break;
 
-        case (newValue == 27):
-            g_form.addOption('u_performance', 11, '1.8  MPI (103 kW )');
-            break;
-        case (newValue == 31 || newValue == 32 || newValue == 33):
-            g_form.addOption('u_performance', 10, '2.8 V6 ( 100 kW )');
-            g_form.addOption('u_performance', 12, '1.9 JTS ( 118 kW)');
-            break;
-        case (newValue == 41 || newValue == 42 || newValue == 43):
-            g_form.addOption('u_performance', 8, '2.4 JTD ( 130 kW)');
-            g_form.addOption('u_performance', 10, '2.8 V6 ( 100 kW )');
-            g_form.addOption('u_performance', 12, '1.9 JTS ( 118 kW)');
-            break;
-
-        case (newValue == 51 || newValue == 52 || newValue == 53):
-            g_form.addOption('u_performance', 3, '2.3 TDi (80 kW)');
-            g_form.addOption('u_performance', 5, 'JTDM ( 130 kW )');
-            g_form.addOption('u_performance', 7, '2JTS ( 122 kW )');
-            break;
-        case (newValue == 61 || newValue == 62 || newValue == 63):
+        case (newValue == 42):
             g_form.addOption('u_performance', 12, '1.9 JTS ( 118 kW)');
             g_form.addOption('u_performance', 13, '1.4 TB ( 122 kW)');
             g_form.addOption('u_performance', 14, '1.6 d (89 kW)');
             break;
+        case (newValue == 43):
+            g_form.addOption('u_performance', 1, '1.6  (56 kW)');
+            g_form.addOption('u_performance', 2, '1.9 TDi ( 62 kW )');
+            break;
+
         default:
             alert("none disc model");
             break;
@@ -82,25 +69,27 @@
         g_form.setValue('u_performance', performance);
     }
 
+
+
 }]]></script>
         <sys_class_name>sys_script_client</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2024-12-17 21:05:13</sys_created_on>
+        <sys_created_on>2025-01-10 23:36:37</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
-        <sys_id>7923e75983e61650fc9154d6feaad3aa</sys_id>
-        <sys_mod_count>17</sys_mod_count>
-        <sys_name>Disc Car Performance Options</sys_name>
+        <sys_id>82c62f45838356d0fc9154d6feaad3ce</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>BMW Disc  Model Options</sys_name>
         <sys_overrides/>
         <sys_package display_value="Disc shop" source="x_1461179_disk_sho">ee28f9b783161a50fc9154d6feaad3bd</sys_package>
         <sys_policy/>
         <sys_scope display_value="Disc shop">ee28f9b783161a50fc9154d6feaad3bd</sys_scope>
-        <sys_update_name>sys_script_client_7923e75983e61650fc9154d6feaad3aa</sys_update_name>
+        <sys_update_name>sys_script_client_82c62f45838356d0fc9154d6feaad3ce</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-01-10 10:32:24</sys_updated_on>
-        <table>x_1461179_disk_sho_disc</table>
+        <sys_updated_on>2025-01-11 00:03:22</sys_updated_on>
+        <table>x_1461179_disk_sho_disc_bmw</table>
         <type>onChange</type>
-        <ui_type>0</ui_type>
+        <ui_type>10</ui_type>
         <view/>
     </sys_script_client>
 </record_update>

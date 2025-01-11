@@ -23,7 +23,8 @@
         case (newValue == 0):
             g_form.addOption('u_modell', 0, 'Choose Mark of an Car');
             break;
-        case (newValue == 1): // ALfa Romeo            
+        case (newValue == 1): // ALfa Romeo  
+		          
             g_form.addOption('u_modell', 13, '159 (2005 - 2011)');
             g_form.addOption('u_modell', 14, 'GT ( 2004 - 2009 )');
             g_form.addOption('u_modell', 15, 'MITO ( 2010 - 2018 )');
@@ -39,6 +40,7 @@
             g_form.addOption('u_modell', 31, '1 (2019 - 2024 )');
             g_form.addOption('u_modell', 32, '2 Coupe ( 2014 -2021 )');
             g_form.addOption('u_modell', 33, '3 Cabrio ( 2007 - 2014 )');
+			/// 	// (method) g_form.addOption(fieldName: string, choiceValue: string, choiceLabel: string): void
             break;
 
         case (newValue == 4): //  Citroen
@@ -58,7 +60,7 @@
             g_form.addOption('u_modell', 63, 'SWIFT (20017 - 2024)');
             break;
         default:
-            alert("none disc");
+            alert("none disc mark");
             break;
     }
 
@@ -77,7 +79,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>d578e199832e5250fc9154d6feaad317</sys_id>
-        <sys_mod_count>23</sys_mod_count>
+        <sys_mod_count>26</sys_mod_count>
         <sys_name>Disc  Car  Model Options</sys_name>
         <sys_overrides/>
         <sys_package display_value="Disc shop" source="x_1461179_disk_sho">ee28f9b783161a50fc9154d6feaad3bd</sys_package>
@@ -85,7 +87,7 @@
         <sys_scope display_value="Disc shop">ee28f9b783161a50fc9154d6feaad3bd</sys_scope>
         <sys_update_name>sys_script_client_d578e199832e5250fc9154d6feaad317</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-12-17 21:00:22</sys_updated_on>
+        <sys_updated_on>2025-01-10 10:32:09</sys_updated_on>
         <table>x_1461179_disk_sho_disc</table>
         <type>onChange</type>
         <ui_type>0</ui_type>
