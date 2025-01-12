@@ -9,7 +9,7 @@
         <script><![CDATA[current.u_notes = 'This type of Disc has low count.';
 current.u_count = 5;
 current.u_comments = 'Do prdele s poctom ' + current.u_count;
-gs.info("Bezi s komentom "+ current.u_comments);
+gs.info("Bezi s komentom " + current.u_comments);
 current.update();]]></script>
         <synchronous>false</synchronous>
         <sys_class_name>sysevent_script_action</sys_class_name>
@@ -18,7 +18,7 @@ current.update();]]></script>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>39b2a8848376d654fc9154d6feaad3b4</sys_id>
-        <sys_mod_count>10</sys_mod_count>
+        <sys_mod_count>11</sys_mod_count>
         <sys_name>Low Count Discs Records</sys_name>
         <sys_overrides/>
         <sys_package display_value="Disc shop" source="x_1461179_disk_sho">ee28f9b783161a50fc9154d6feaad3bd</sys_package>
@@ -26,7 +26,7 @@ current.update();]]></script>
         <sys_scope display_value="Disc shop">ee28f9b783161a50fc9154d6feaad3bd</sys_scope>
         <sys_update_name>sysevent_script_action_39b2a8848376d654fc9154d6feaad3b4</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-12-25 23:18:28</sys_updated_on>
+        <sys_updated_on>2025-01-11 08:37:00</sys_updated_on>
     </sysevent_script_action>
     <sys_es_latest_script action="INSERT_OR_UPDATE">
         <id>39b2a8848376d654fc9154d6feaad3b4</id>
