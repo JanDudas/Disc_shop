@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_email">
+    <sys_script_email action="INSERT_OR_UPDATE">
+        <name>LowCountDiscs</name>
+        <new_lines_to_html>false</new_lines_to_html>
+        <script><![CDATA[(function runMailScript( /* GlideRecord */ current, /* TemplatePrinter */ template,
+    /* Optional EmailOutbound */
+    email, /* Optional GlideRecord */ email_action,
+    /* Optional GlideRecord */
+    event) {
+
+    // Add your code here
+    //  
+    var grBMW = new GlideRecord('x_1461179_disk_sho_disc_bmw');
+
+    // u_mark  u_modell u_performance 	u_count  u_created
+
+    var Headers = ["Mark", "Model", "Performance", "Count", "Created"];
+    // var Headers = ["Number","Caller","Short Desc","Assignment Group", "Assigned To"];
+    var datum = new GlideDateTime();
+    var fileName = 'LowDiscsCounts_' + datum + '.csv';
+    var csvData = ''; //The variable csvData will contain a string which is used to build the CSV file contents
+    for (var i = 0; i < Headers.length; i++) { //Build the Headers
+        csvData = csvData + '"' + Headers[i] + '"' + ',';
+    }
+    csvData = csvData + "\r\n";
+
+
+    grBMW.addQuery('u_count', '<=', 4);
+    grBMW.query();
+
+    var sysID = '';
+    while (grBMW.next()) {
+
+        csvData = csvData + '"' + grBMW.u_mark.getDisplayValue() + '",' + '"' + grBMW.u_modell.getDisplayValue() + '",' + '"' + grBMW.u_performance.getDisplayValue() + '",' + '"' + grBMW.u_count.getDisplayValue() + '",' + '"' + grBMW.u_created.getDisplayValue() + '"';
+        csvData = csvData + "\r\n";
+
+        sysID = grBMW.sys_id;
+    }
+
+
+    //attach the file to a record.
+    var grRec = new GlideRecord("x_1461179_disk_sho_disc_bmw");
+    var attachmentID = '';
+
+    grRec.addQuery("sys_id", sysID);
+    grRec.query();
+    if (grRec.next()) {
+        var grAttachment = new GlideSysAttachment();
+        attachmentID = grAttachment.write(grRec, fileName, 'application/csv', csvData);
+        gs.info('attachmentID je:  ' + attachmentID);
+    }
+
+    // todo
+    var attachment_sysid = attachmentID; /* some sys_id string */ //;
+    var gr = new GlideRecord("sys_attachment");
+    if (gr.get(attachment_sysid)) {
+        var ga = new GlideSysAttachment();
+        gs.debug("content: {0}", ga.getContent(gr));
+        template.print(ga.getContent(gr));
+
+    } else {
+        gs.debug("Could not find sys_attachment record for sysid {0}", attachment_sysid);
+        template.print(attachment_sysid);
+    }
+
+})(current, template, email, email_action, event);]]></script>
+        <sys_class_name>sys_script_email</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-13 21:07:36</sys_created_on>
+        <sys_id>c747a60a8347da54fc9154d6feaad370</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>LowCountDiscs</sys_name>
+        <sys_package display_value="Disc shop" source="x_1461179_disk_sho">ee28f9b783161a50fc9154d6feaad3bd</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Disc shop">ee28f9b783161a50fc9154d6feaad3bd</sys_scope>
+        <sys_update_name>sys_script_email_c747a60a8347da54fc9154d6feaad370</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-13 21:43:57</sys_updated_on>
+    </sys_script_email>
+    <sys_es_latest_script action="INSERT_OR_UPDATE">
+        <id>c747a60a8347da54fc9154d6feaad370</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-13 21:07:35</sys_created_on>
+        <sys_id>eaa762ca8387da54fc9154d6feaad391</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-13 21:07:35</sys_updated_on>
+        <table>sys_script_email</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+</record_update>

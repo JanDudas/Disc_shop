@@ -1,3 +1,3 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element db_object_id="09b864c9838712d0fc9154d6feaad324" extends="x_1461179_disk_sho_disc" label="disc_BMW" max_length="40" name="x_1461179_disk_sho_disc_bmw" type="collection"/>
+    <element db_object_id="09b864c9838712d0fc9154d6feaad324" extends="x_1461179_disk_sho_disc" label="disc_BMW" max_length="40" name="x_1461179_disk_sho_disc_bmw" text_index="true" type="collection"/>
 </database>

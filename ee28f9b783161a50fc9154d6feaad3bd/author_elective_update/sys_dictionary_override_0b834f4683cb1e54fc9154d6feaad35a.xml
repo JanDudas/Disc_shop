@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_dictionary_override">
+    <sys_dictionary_override action="DELETE">
+        <attributes/>
+        <attributes_override>false</attributes_override>
+        <base_table>x_1461179_disk_sho_disc</base_table>
+        <calculation/>
+        <calculation_override>false</calculation_override>
+        <default_value/>
+        <default_value_override>true</default_value_override>
+        <dependent/>
+        <dependent_override>false</dependent_override>
+        <display_override>false</display_override>
+        <element>u_modell</element>
+        <mandatory>false</mandatory>
+        <mandatory_override>true</mandatory_override>
+        <name>x_1461179_disk_sho_disc_audi</name>
+        <read_only>true</read_only>
+        <read_only_override>true</read_only_override>
+        <reference_qual/>
+        <reference_qual_override>false</reference_qual_override>
+        <sys_class_name>sys_dictionary_override</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-13 23:09:25</sys_created_on>
+        <sys_id>0b834f4683cb1e54fc9154d6feaad35a</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>u_modell</sys_name>
+        <sys_package display_value="Disc shop" source="x_1461179_disk_sho">ee28f9b783161a50fc9154d6feaad3bd</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Disc shop">ee28f9b783161a50fc9154d6feaad3bd</sys_scope>
+        <sys_update_name>sys_dictionary_override_0b834f4683cb1e54fc9154d6feaad35a</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-13 23:09:25</sys_updated_on>
+    </sys_dictionary_override>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Disc shop">ee28f9b783161a50fc9154d6feaad3bd</application>
+        <file_path/>
+        <instance_id>e9ec096d1bdef1107d9d2f8dee4bcb4b</instance_id>
+        <instance_name>dev203221</instance_name>
+        <name>sys_dictionary_override_0b834f4683cb1e54fc9154d6feaad35a</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_dictionary_override"><sys_dictionary_override action="INSERT_OR_UPDATE"><attributes/><attributes_override>false</attributes_override><base_table>x_1461179_disk_sho_disc</base_table><calculation/><calculation_override>false</calculation_override><default_value/><default_value_override>true</default_value_override><dependent/><dependent_override>false</dependent_override><display_override>false</display_override><element>u_modell</element><mandatory>false</mandatory><mandatory_override>true</mandatory_override><name>x_1461179_disk_sho_disc_audi</name><read_only>true</read_only><read_only_override>true</read_only_override><reference_qual/><reference_qual_override>false</reference_qual_override><sys_class_name>sys_dictionary_override</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2025-01-13 23:09:25</sys_created_on><sys_id>0b834f4683cb1e54fc9154d6feaad35a</sys_id><sys_mod_count>1</sys_mod_count><sys_name>u_modell</sys_name><sys_package display_value="Disc shop" source="x_1461179_disk_sho">ee28f9b783161a50fc9154d6feaad3bd</sys_package><sys_policy/><sys_scope display_value="Disc shop">ee28f9b783161a50fc9154d6feaad3bd</sys_scope><sys_update_name>sys_dictionary_override_0b834f4683cb1e54fc9154d6feaad35a</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-01-13 23:09:25</sys_updated_on></sys_dictionary_override></record_update>]]></payload>
+        <payload_hash>-1032478440</payload_hash>
+        <record_name>u_modell</record_name>
+        <reverted_from/>
+        <source>78aa7677837e9250fc9154d6feaad36e</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-13 23:09:25</sys_created_on>
+        <sys_id>0f834f4683cb1e54fc9154d6feaad37a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19461edd9840000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-13 23:09:25</sys_updated_on>
+        <type>Dictionary Entry Override</type>
+        <update_guid>c3834f460ccb1e5495c1f3e85f95d27a</update_guid>
+        <update_guid_history>c3834f460ccb1e5495c1f3e85f95d27a:-1032478440,0b834f4649cb1e54f31d46363dbfe475:-825619822</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-13 23:10:07</sys_created_on>
+        <sys_db_object display_value="" name="sys_dictionary_override">sys_dictionary_override</sys_db_object>
+        <sys_id>4a54bca2a4a14d1ebc066b4a2f537fa1</sys_id>
+        <sys_metadata>0b834f4683cb1e54fc9154d6feaad35a</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>u_modell</sys_name>
+        <sys_package display_value="Disc shop" source="x_1461179_disk_sho">ee28f9b783161a50fc9154d6feaad3bd</sys_package>
+        <sys_parent display_value="">6d60834e834b1e54fc9154d6feaad3bd</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Disc shop">ee28f9b783161a50fc9154d6feaad3bd</sys_scope>
+        <sys_scope_delete display_value="">0fdb8dfa0cfa4d2c84d33507d7f9a971</sys_scope_delete>
+        <sys_update_name>sys_dictionary_override_0b834f4683cb1e54fc9154d6feaad35a</sys_update_name>
+        <sys_update_version display_value="sys_dictionary_override_0b834f4683cb1e54fc9154d6feaad35a">0f834f4683cb1e54fc9154d6feaad37a</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-13 23:10:07</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

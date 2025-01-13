@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element audit="true" db_object_id="7de5957483e21610fc9154d6feaad3ae" label="disc" max_length="40" name="x_1461179_disk_sho_disc" type="collection">
-        <element label="Additional comments" max_length="4000" name="u_comments" type="journal_input"/>
+    <element audit="true" db_object_id="7de5957483e21610fc9154d6feaad3ae" label="disc" max_length="40" name="x_1461179_disk_sho_disc" text_index="true" type="collection">
+        <element audit="true" label="Additional comments" max_length="4000" name="u_comments" type="journal_input"/>
         <element choice="3" default="0" label="Mark" mandatory="true" max_length="40" name="u_mark" reference_qual="null" reference_qual_condition="null" type="integer">
             <choice>
                 <element inactive_on_update="false" label="Citroen" sequence="4" value="4"/>
@@ -26,7 +26,7 @@
                 <element inactive_on_update="false" label="50" sequence="9" value="10"/>
             </choice>
         </element>
-        <element label="Work notes" max_length="4000" name="u_notes" type="journal_input"/>
+        <element audit="true" label="Work notes" max_length="4000" name="u_notes" type="journal_input"/>
         <element default="javascript:current.getTableName();" label="Class" max_length="80" name="sys_class_name" type="sys_class_name"/>
         <element label="Count" mandatory="true" max_length="40" name="u_count" type="integer"/>
         <element attributes="edge_encryption_enabled=true" label="Created" mandatory="true" max_length="40" name="u_created" type="glide_date_time"/>
@@ -50,7 +50,7 @@
             </choice>
         </element>
         <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
-        <element choice="3" default="0" label="Model" mandatory="true" max_length="40" name="u_modell" type="integer">
+        <element choice="1" default="0" label="Model" mandatory="true" max_length="40" name="u_modell" type="integer">
             <choice/>
         </element>
         <index name="index">

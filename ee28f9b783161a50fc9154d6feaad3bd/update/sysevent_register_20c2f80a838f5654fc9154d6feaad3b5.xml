@@ -3,23 +3,23 @@
         <caller_access/>
         <derived_priority>100</derived_priority>
         <description>This event is fired for each  Disc record</description>
-        <event_name>x_1461179_disk_sho.lowCountDiscRecords</event_name>
+        <event_name>x_1461179_disk_sho.LowCountEmail</event_name>
         <fired_by>Scheduled Script Execution - Low Count Disc  Checking</fired_by>
         <priority>100</priority>
         <queue/>
-        <suffix>lowCountDiscRecords</suffix>
+        <suffix>LowCountEmail</suffix>
         <sys_class_name>sysevent_register</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2024-12-19 19:11:23</sys_created_on>
-        <sys_id>9e6bdd8283a21690fc9154d6feaad3ac</sys_id>
-        <sys_mod_count>2</sys_mod_count>
-        <sys_name>x_1461179_disk_sho.lowCountDiscRecords</sys_name>
+        <sys_created_on>2025-01-13 12:38:13</sys_created_on>
+        <sys_id>20c2f80a838f5654fc9154d6feaad3b5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_1461179_disk_sho.LowCountEmail</sys_name>
         <sys_package display_value="Disc shop" source="x_1461179_disk_sho">ee28f9b783161a50fc9154d6feaad3bd</sys_package>
         <sys_policy/>
         <sys_scope display_value="Disc shop">ee28f9b783161a50fc9154d6feaad3bd</sys_scope>
-        <sys_update_name>sysevent_register_9e6bdd8283a21690fc9154d6feaad3ac</sys_update_name>
+        <sys_update_name>sysevent_register_20c2f80a838f5654fc9154d6feaad3b5</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-01-12 21:58:21</sys_updated_on>
+        <sys_updated_on>2025-01-13 12:38:13</sys_updated_on>
         <table>x_1461179_disk_sho_disc_bmw</table>
     </sysevent_register>
 </record_update>
