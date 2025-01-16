@@ -8,7 +8,7 @@
         <global>true</global>
         <isolate_script>true</isolate_script>
         <messages/>
-        <name>BMW Disc  Model Options</name>
+        <name>BMW Disc Model Options</name>
         <order/>
         <script><![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
     if (newValue === '') {
@@ -85,15 +85,15 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>82c62f45838356d0fc9154d6feaad3ce</sys_id>
-        <sys_mod_count>6</sys_mod_count>
-        <sys_name>BMW Disc  Model Options</sys_name>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_name>BMW Disc Model Options</sys_name>
         <sys_overrides/>
         <sys_package display_value="Disc shop" source="x_1461179_disk_sho">ee28f9b783161a50fc9154d6feaad3bd</sys_package>
         <sys_policy/>
         <sys_scope display_value="Disc shop">ee28f9b783161a50fc9154d6feaad3bd</sys_scope>
         <sys_update_name>sys_script_client_82c62f45838356d0fc9154d6feaad3ce</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-01-11 22:52:13</sys_updated_on>
+        <sys_updated_on>2025-01-16 10:02:27</sys_updated_on>
         <table>x_1461179_disk_sho_disc_bmw</table>
         <type>onChange</type>
         <ui_type>10</ui_type>

@@ -40,7 +40,7 @@
 <p>&nbsp;</p>
 <p>pls increase count of followed discs:&nbsp;</p>
 <p>&nbsp;</p>
-<p>${mail_script:LowCountDiscs}</p>
+<p>${mail_script:LowCountDiscsBMWAdmin}</p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>]]></message_html>
         <message_list/>
@@ -64,7 +64,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>7ee211068387d654fc9154d6feaad3df</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_name>LowCountDiscNotification</sys_name>
         <sys_overrides/>
         <sys_package display_value="Disc shop" source="x_1461179_disk_sho">ee28f9b783161a50fc9154d6feaad3bd</sys_package>
@@ -72,7 +72,7 @@
         <sys_scope display_value="Disc shop">ee28f9b783161a50fc9154d6feaad3bd</sys_scope>
         <sys_update_name>sysevent_email_action_7ee211068387d654fc9154d6feaad3df</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-01-13 21:51:50</sys_updated_on>
+        <sys_updated_on>2025-01-14 21:00:07</sys_updated_on>
         <sys_version>2</sys_version>
         <template display_value="Unsubscribe and Preferences">7ed0481f3b0b2200c869c2c703efc487</template>
         <type>email</type>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="DELETE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description/>
+        <field/>
+        <global>true</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name>Disc  onSubmit  adding</name>
+        <order/>
+        <script><![CDATA[function onSubmit() {
+    //Type appropriate comment here, and begin script below
+    alert("Thank for adding to Disc table");	
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-18 19:23:51</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>31e6ccb5832eda50fc9154d6feaad35e</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Disc  onSubmit  adding</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Disc shop" source="x_1461179_disk_sho">ee28f9b783161a50fc9154d6feaad3bd</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Disc shop">ee28f9b783161a50fc9154d6feaad3bd</sys_scope>
+        <sys_update_name>sys_script_client_31e6ccb5832eda50fc9154d6feaad35e</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-14 08:48:25</sys_updated_on>
+        <table>x_1461179_disk_sho_disc</table>
+        <type>onSubmit</type>
+        <ui_type>0</ui_type>
+        <view/>
+    </sys_script_client>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Disc shop">ee28f9b783161a50fc9154d6feaad3bd</application>
+        <file_path/>
+        <instance_id>e9ec096d1bdef1107d9d2f8dee4bcb4b</instance_id>
+        <instance_name>dev203221</instance_name>
+        <name>sys_script_client_31e6ccb5832eda50fc9154d6feaad35e</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_script_client"&gt;&lt;sys_script_client action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;applies_extended&gt;false&lt;/applies_extended&gt;&lt;condition/&gt;&lt;description/&gt;&lt;field/&gt;&lt;global&gt;true&lt;/global&gt;&lt;isolate_script&gt;true&lt;/isolate_script&gt;&lt;messages/&gt;&lt;name&gt;Disc  onSubmit  adding&lt;/name&gt;&lt;order/&gt;&lt;script&gt;&lt;![CDATA[function onSubmit() {
+    //Type appropriate comment here, and begin script below
+    alert("Thank for adding to Disc table");	
+}]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script_client&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2024-12-18 19:23:51&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;31e6ccb5832eda50fc9154d6feaad35e&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_name&gt;Disc  onSubmit  adding&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="Disc shop" source="x_1461179_disk_sho"&gt;ee28f9b783161a50fc9154d6feaad3bd&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Disc shop"&gt;ee28f9b783161a50fc9154d6feaad3bd&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_client_31e6ccb5832eda50fc9154d6feaad35e&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-01-14 08:48:25&lt;/sys_updated_on&gt;&lt;table&gt;x_1461179_disk_sho_disc&lt;/table&gt;&lt;type&gt;onSubmit&lt;/type&gt;&lt;ui_type&gt;0&lt;/ui_type&gt;&lt;view/&gt;&lt;/sys_script_client&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>981950506</payload_hash>
+        <record_name>Disc  onSubmit  adding</record_name>
+        <reverted_from/>
+        <source>78aa7677837e9250fc9154d6feaad36e</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-14 08:48:25</sys_created_on>
+        <sys_id>a81809de8347d294fc9154d6feaad363</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19463fff25f0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-14 08:48:25</sys_updated_on>
+        <type>Client Script</type>
+        <update_guid>201809dec147d294a49816dcd14da963</update_guid>
+        <update_guid_history>201809dec147d294a49816dcd14da963:981950506,35c7fb45568b56d0e93da113f10bcaf6:0,5e97fbc1848b56d0cfa5ad80906dd9a3:566775933,a4b673c9ea4b56d0cefb3b84db05ea4e:0,d3a4ffc5c20b56d0dc539e360eed86c8:566775933,15b5282cb4cf929034d60f421afef816:0,aeaaf677c47e925070ab59f491ef47b1:1469169144,264a98da9c3a965800225102cd0fd067:324434436,ad965c31ba661e505b811888df4aa744:-1548360975</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-16 14:24:10</sys_created_on>
+        <sys_db_object display_value="" name="sys_script_client">sys_script_client</sys_db_object>
+        <sys_id>8f1002ef288840abbd0a2f14c6ddbe91</sys_id>
+        <sys_metadata>31e6ccb5832eda50fc9154d6feaad35e</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Disc  onSubmit  adding</sys_name>
+        <sys_package display_value="Disc shop" source="x_1461179_disk_sho">ee28f9b783161a50fc9154d6feaad3bd</sys_package>
+        <sys_parent display_value="disc">7de5957483e21610fc9154d6feaad3ae</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Disc shop">ee28f9b783161a50fc9154d6feaad3bd</sys_scope>
+        <sys_scope_delete display_value="">0fdb8dfa0cfa4d2c84d33507d7f9a971</sys_scope_delete>
+        <sys_update_name>sys_script_client_31e6ccb5832eda50fc9154d6feaad35e</sys_update_name>
+        <sys_update_version display_value="sys_script_client_31e6ccb5832eda50fc9154d6feaad35e">a81809de8347d294fc9154d6feaad363</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-16 14:24:10</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
