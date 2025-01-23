@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_atf_test_suite_test">
+    <sys_atf_test_suite_test action="INSERT_OR_UPDATE">
+        <abort_on_failure>false</abort_on_failure>
+        <order/>
+        <sys_class_name>sys_atf_test_suite_test</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-17 07:49:30</sys_created_on>
+        <sys_id>845794df83c31610fc9154d6feaad367</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>b01efc4f8307d618fc9154d6feaad364</sys_name>
+        <sys_package display_value="Disc shop" source="x_1461179_disk_sho">ee28f9b783161a50fc9154d6feaad3bd</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Disc shop">ee28f9b783161a50fc9154d6feaad3bd</sys_scope>
+        <sys_update_name>sys_atf_test_suite_test_845794df83c31610fc9154d6feaad367</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-17 07:49:30</sys_updated_on>
+        <test display_value="Disc Low Count Admin UI Test">b01efc4f8307d618fc9154d6feaad364</test>
+        <test_suite display_value="Disc Count  Test  Suite">2966541b83c31610fc9154d6feaad3d8</test_suite>
+    </sys_atf_test_suite_test>
+</record_update>
