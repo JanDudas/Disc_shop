@@ -9,7 +9,7 @@
         <name>Disc Shop Homepage - Container 1</name>
         <order>1</order>
         <semantic_tag/>
-        <sp_page display_value="dpjd_index">eadf007083835a90fc9154d6feaad31d</sp_page>
+        <sp_page display_value="dpjd_home">eadf007083835a90fc9154d6feaad31d</sp_page>
         <subheader>false</subheader>
         <sys_class_name>sp_container</sys_class_name>
         <sys_created_by>admin</sys_created_by>
