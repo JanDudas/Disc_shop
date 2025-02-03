@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[function(spModal,spUtil) {	
+	var c = this;	 
+	 
+}]]></client_script>
+        <controller_as>c</controller_as>
+        <css/>
+        <data_table>sp_instance</data_table>
+        <demo_data>{
+	"data": {
+		"name": "Johan",
+			"email": "johan.d@gmail.com",				 
+				"phone": "0011223344"
+	}
+}
+</demo_data>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>news</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>news</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+	/* populate the 'data' object */
+	/* e.g., data.table = $sp.getValue('table'); */
+
+	 
+
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-03 09:43:12</sys_created_on>
+        <sys_id>96649cbc83e39e50fc9154d6feaad3a0</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>news</sys_name>
+        <sys_package display_value="Disc shop" source="x_1461179_disk_sho">ee28f9b783161a50fc9154d6feaad3bd</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Disc shop">ee28f9b783161a50fc9154d6feaad3bd</sys_scope>
+        <sys_update_name>sp_widget_96649cbc83e39e50fc9154d6feaad3a0</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-03 09:45:26</sys_updated_on>
+        <template><![CDATA[<div class="panel panel-default">
+  <div class="panel-heading clearfix">
+    <h3 class="panel-title pull-left">
+      ${News}
+    </h3>
+  </div>
+
+  <div class="panel-body">
+
+    <div class="inner-wrap">
+      <!--div id="breadcrumbs">
+
+      </div-->
+      <article>
+        <h1><strong>Preco plechove disky? </strong></h1>
+        <p> RunFlat pneumatiky sú novinkou vo svete áut, ktoré mnohým vodičom uľahčujú situáciu, ktorá príde nečakane. Ak ste o tejto pneumatike ešte nikdy nepočuli, tak je na čase, aby ste sa s ňou zoznámili. RunFlat pneumatika je guma, ktorá vám v prípade nečakaného defektu umožní dostať sa na najbližšie miesto, kde môžete auto bezpečne odstaviť. Nikdy sa tak nemusíte obávať, že by ste zostali stáť na diaľnici alebo na neznámom mieste, ktoré ste nikdy nenavštívili.
+          Dôvodov, prečo môže dostať vodič defekt je niekoľko, no hlavné je, že táto udalosť sa nedá nijakým spôsobom predvídať. Donedávna riešili vodiči túto situáciu len pomocou rezervnej pneumatiky, ktorá zaberá miesto a pre niektorých vodičov je ťažká na výmenu. Ak si auto nechcete zbytočne zapratať a rezervnú pneumatiku by ste najradšej vymenili za niečo pohodlnejšie a istejšie, RunFlat pneumatika je presne to, čo hľadáte. Na prvý pohľad ju od klasickej nespoznáte, no jej rozdiel je v konštrukcii, ktorá je vybavená špeciálnymi vystuženými bočnicami. Tie bránia deformácii pneumatiky v prípade defektu a zaisťujú jej udržanie aj vtedy, keď koleso úplne stratí tlak.
+          Hoci by ste v prípade defektu na tejto pneumatike nemali jazdiť na veľké vzdialenosti, bezpečne vás dovezie na miesto, kde si pohodlne vymeníte koleso za nové. Nemusíte sa tak obávať situácie, že by ste menili defekt priamo na frekventovanej ceste alebo v nepriaznivom počasí. Pomocou RunFlat pneumatiky dokážete prejsť desiatky kilometrov bez toho, aby ste sa obávali, že niekde uviaznete. </p>
+
+        <h1><strong>Aké sú výhody a nevýhody týchto diskov ? </strong></h1>
+        <p>  RunFlat pneumatiky ponúkajú rôzny výrobcovia ako napríklad Continental, Michelin, Bridgestone, Nokian, Pirelli, Dunlop a Goodyear. Vyberať si tak môžete zo širokého sortimentu, ktorý nám trh ponúka. Hoci v minulosti sa RunFlat pneumatika veľmi líšia od tej klasickej najmä v komforte jazdy a jazdnými vlastnosťami, v súčasnosti je situácia úplne iná.
+          Pri testovaní pneumatík nezávislými inštitúciami bolo zistené, že RunFlat pneumatika vďaka vývoju zlepšila svoje vlastnosti na všetkých typoch povrchov a dnes sa vyrovná aj tej klasickej. Obrovskou výhodou je, že v prípade defektu neohrozíte bezpečnosť premávky tak, ako pri klasickej pneumatike. Koleso nemusíte meniť na mieste a tiež nemusíte volať asistenčnú službu. Rezervná pneumatika už nemusí byť súčasťou vašej výbavy, čo vám ušetrí nielen miesto vo vozidle, ale aj jeho zaťaženie.
+          Ak sa dostanete do situácie, že budete nútený RunFlat pneumatiku použiť, nejazdite s ňou rýchlosťou viac ako 80 km/h. Nezabúdajte tiež na to, že podmienkou na jej používanie je, aby bolo vozidlo vybavené systémom kontroly tlaku. Hoci vodičov odrádza najmä vyššia cena výrobku a drahšia prevádzka, RunFlat pneumatika je  pohodlnou možnosťou, ako sa neocitnúť v neriešiteľnej a ťažkej situácii.
+        </p>
+
+      </article>
+
+    </div>
+
+ 
+    
+  </div>
+</div>]]></template>
+    </sp_widget>
+</record_update>

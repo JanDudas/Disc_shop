@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="feb5f904832b9e10fc9154d6feaad3f1" label="Customer Contacts" max_length="40" name="x_1461179_disk_sho_customer_contacts" type="collection">
+        <element label="Email" mandatory="true" max_length="120" name="u_email" type="string"/>
+        <element label="Phone" mandatory="true" max_length="120" name="u_phone" type="string"/>
+        <element label="Question" max_length="400" name="u_question" type="string"/>
+        <element choice="3" default="0" label="State" max_length="40" name="u_state" type="integer">
+            <choice>
+                <element inactive_on_update="false" label="Open" value="0"/>
+                <element inactive_on_update="false" label="Closed" value="1"/>
+            </choice>
+        </element>
+        <element label="Name" mandatory="true" max_length="120" name="u_name" type="string"/>
+    </element>
+</database>
