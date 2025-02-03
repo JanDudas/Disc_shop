@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[function(spModal,spUtil) {	
+	var c = this;
+	var nameInput='', nameOK=false, email='', emailOK=false, phoneNumber='', phoneNumberOK=false, question='';
+	const nameRegexp = /^[a-zA-Z ]+$/;  // ^[ a-zA-Z\-\']+$ - dash, space, and single quote. 
+	const emailRegexp = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+	const numberRegexp = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;  
+
+	c.displayName = function() {
+		nameInput =  c.data.name;	
+		nameOK= nameRegexp.test(nameInput);	
+		c.data.messageName = (nameOK) ?  ' '  : 'Vloz spravne meno ' ;
+	} 
+
+	c.displayEmail = function() {
+		email = c.data.email;
+		emailOK = emailRegexp.test(email);  		 
+		c.data.messageEmail = (emailOK) ?  ' '  : 'Vloz spravne email'  ;
+	}
+
+	c.displayPhone = function() {
+		phoneNumber = c.data.phone;
+		phoneNumberOK = numberRegexp.test(phoneNumber);
+		c.data.messagePhone =  (phoneNumberOK) ?  ' '  : 'Neobsahuje spravne telefonne cislo';
+	}
+
+	c.displayQuestion = function() {
+		question = c.data.question;		
+	}
+
+	c.displayName();
+	c.displayEmail();
+	c.displayPhone();
+	c.displayQuestion();
+
+	c.filledMandatoryFields = function(){
+		if(!emailOK || !phoneNumberOK || !nameOK ){
+			return false;
+		}
+		return true;
+	}
+
+	c.inputContactRecord = function(){		
+		spModal.confirm("Are you sure you want to add this Contact record?").then(function(confirmed){
+			if(confirmed){				
+				c.newContact();
+			} else {
+				spUtil.addTrivialMessage("The " + "contact record has error.");
+			}
+		});
+	}
+	c.newContact = function(){		 
+		c.server.get({
+			action: 'newContact',
+			name: nameInput,
+			emailes: email,
+			phoneNR: phoneNumber,
+			que: question
+		}).then(function(r){
+			spUtil.addTrivialMessage("The " + "contact record has been inserted.");
+			c.data.contacts.unshift(r.data.newContact());
+			c.data.contactID = r.data.contactID;
+			//		$rootScope.contactID =c.data.contactID;
+		});
+	}
+}]]></client_script>
+        <controller_as>c</controller_as>
+        <css/>
+        <data_table>sp_instance</data_table>
+        <demo_data>{
+	"data": {
+		"name": "Johan",
+			"email": "johan.d@gmail.com",				 
+				"phone": "0011223344"
+	}
+}
+</demo_data>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>write_us</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>write us</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+	/* populate the 'data' object */
+	/* e.g., data.table = $sp.getValue('table'); */
+
+	data.contacts = [];
+
+
+	if (input){
+		if(input.action=='newContact'){
+			var contactGR = new GlideRecord('x_1461179_disk_sho_customer_contacts');
+			contactGR.newRecord();
+			contactGR.setValue('u_name', input.name);
+			contactGR.setValue('u_email', input.emailes);
+			contactGR.setValue('u_phone', input.phoneNR);
+			contactGR.setValue('u_question', input.que);		
+
+			console.log(data.loggedinUser+' has clicked '+input.name  + ", " + input.emailes);
+
+			var id = contactGR.insert();
+			data.contactID = id;
+			data.newContact = {};		 
+
+			// getRecordValues(): copies values for the specified field names from the GlideRecord into the data parameter
+			$sp.getRecordValues(data.newContact,contactGR,"u_name,u_email, u_phone_number, u_question, sys_id");
+
+		}
+	}
+
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-01 08:39:39</sys_created_on>
+        <sys_id>73a2b1cc83e79e10fc9154d6feaad3a4</sys_id>
+        <sys_mod_count>118</sys_mod_count>
+        <sys_name>write us</sys_name>
+        <sys_package display_value="Disc shop" source="x_1461179_disk_sho">ee28f9b783161a50fc9154d6feaad3bd</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Disc shop">ee28f9b783161a50fc9154d6feaad3bd</sys_scope>
+        <sys_update_name>sp_widget_73a2b1cc83e79e10fc9154d6feaad3a4</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-03 09:54:22</sys_updated_on>
+        <template><![CDATA[<div class="panel panel-default">
+  <div class="panel-heading clearfix">
+    <h3 class="panel-title pull-left">
+      ${Write Us}
+    </h3>
+  </div>
+
+  <div class="panel-body">
+    <div class="inner-wrap">
+      <label for="frm-name" class="control-label"> Meno a priezvisko: </label>
+      <input type="text" name="name" id="frm-name" class="form-control" cols="60" ng-model="c.data.name" ng-change="c.displayName()">
+      <h4 style="color:red">{{ c.data.messageName }}</h4>
+
+      <label for="frm-email" class="control-label">E-mailová adresa:</label>
+      <input type="text" name="email" id="frm-email" class="form-control"  cols="60" ng-model="c.data.email" ng-change="c.displayEmail()">
+      <h4 style="color:red">{{ c.data.messageEmail }}</h4>
+
+      <label for="frm-phone" class="control-label"> Vase telefonne cislo: </label>
+      <input type="text" name="phone" id="frm-phone" class="form-control" cols="60" ng-model="c.data.phone" ng-change="c.displayPhone()">
+      <h4 style="color:red">{{ c.data.messagePhone }}</h4>
+
+      <!~-ng-if="c.data.phone.length != 10" <!strong style="color:red"--> 
+
+      <label for="frm-question" class="control-label">Zadajte otázku:</label>
+      <textarea name="question" id="frm-question" class="form-control" ng-model="c.data.question" ng-change="c.displayQuestion()" ></textarea>
+
+      <input type="submit" value="Submit"  name="Submit" ng-if="c.filledMandatoryFields()" ng-disabled="submitted" ng-click="c.newContact()">    
+    </div>
+  </div>
+</div>]]></template>
+    </sp_widget>
+</record_update>
