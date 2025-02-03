@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sysevent_script_action">
+    <sysevent_script_action action="DELETE">
+        <active>false</active>
+        <condition_script/>
+        <description/>
+        <event_name>x_1461179_disk_sho.lowCountDiscRecords</event_name>
+        <name>Export in text file</name>
+        <order>100</order>
+        <script><![CDATA[var myFields = new Packages.com.glide.choice.ChoiceList();
+myFields.add('first_name');
+myFields.add('last_name');
+var myQuery = 'first_name=Fred';
+var c = new Packages.com.glide.generators.CSVExporter('sys_user', myQuery, myFields);
+
+
+//  C:/Users/Asus pc/Documents/ServiceNow/pat.txt
+var outFile = new Packages.java.io.File('C:/Users/Asus pc/Documents/ServiceNow/pat.txt');
+//var outFile = new Packages.java.io.File('/tmp/pat.txt');
+var outStream = new Packages.java.io.FileOutputStream(outFile);
+gs.info("OutFile je : " + outFile);
+
+c.generate(outStream);
+outStream.close();]]></script>
+        <synchronous>false</synchronous>
+        <sys_class_name>sysevent_script_action</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-23 09:35:03</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>c9fe37878366d214fc9154d6feaad336</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_name>Export in text file</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Disc shop" source="x_1461179_disk_sho">ee28f9b783161a50fc9154d6feaad3bd</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Disc shop">ee28f9b783161a50fc9154d6feaad3bd</sys_scope>
+        <sys_update_name>sysevent_script_action_c9fe37878366d214fc9154d6feaad336</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-23 10:14:26</sys_updated_on>
+    </sysevent_script_action>
+    <sys_es_latest_script action="DELETE">
+        <id>c9fe37878366d214fc9154d6feaad336</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-23 09:35:02</sys_created_on>
+        <sys_id>c1cfb34b83a6d214fc9154d6feaad3f1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-23 09:35:02</sys_updated_on>
+        <table>sysevent_script_action</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Disc shop">ee28f9b783161a50fc9154d6feaad3bd</application>
+        <file_path/>
+        <instance_id>e9ec096d1bdef1107d9d2f8dee4bcb4b</instance_id>
+        <instance_name>dev203221</instance_name>
+        <name>sysevent_script_action_c9fe37878366d214fc9154d6feaad336</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sysevent_script_action"&gt;&lt;sysevent_script_action action="INSERT_OR_UPDATE"&gt;&lt;active&gt;false&lt;/active&gt;&lt;condition_script/&gt;&lt;description/&gt;&lt;event_name&gt;x_1461179_disk_sho.lowCountDiscRecords&lt;/event_name&gt;&lt;name&gt;Export in text file&lt;/name&gt;&lt;order&gt;100&lt;/order&gt;&lt;script&gt;&lt;![CDATA[var myFields = new Packages.com.glide.choice.ChoiceList();
+myFields.add('first_name');
+myFields.add('last_name');
+var myQuery = 'first_name=Fred';
+var c = new Packages.com.glide.generators.CSVExporter('sys_user', myQuery, myFields);
+
+
+//  C:/Users/Asus pc/Documents/ServiceNow/pat.txt
+var outFile = new Packages.java.io.File('C:/Users/Asus pc/Documents/ServiceNow/pat.txt');
+//var outFile = new Packages.java.io.File('/tmp/pat.txt');
+var outStream = new Packages.java.io.FileOutputStream(outFile);
+gs.info("OutFile je : " + outFile);
+
+c.generate(outStream);
+outStream.close();]]&gt;&lt;/script&gt;&lt;synchronous&gt;false&lt;/synchronous&gt;&lt;sys_class_name&gt;sysevent_script_action&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2024-12-23 09:35:03&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;c9fe37878366d214fc9154d6feaad336&lt;/sys_id&gt;&lt;sys_mod_count&gt;7&lt;/sys_mod_count&gt;&lt;sys_name&gt;Export in text file&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="Disc shop" source="x_1461179_disk_sho"&gt;ee28f9b783161a50fc9154d6feaad3bd&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Disc shop"&gt;ee28f9b783161a50fc9154d6feaad3bd&lt;/sys_scope&gt;&lt;sys_update_name&gt;sysevent_script_action_c9fe37878366d214fc9154d6feaad336&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2024-12-23 10:14:26&lt;/sys_updated_on&gt;&lt;/sysevent_script_action&gt;&lt;sys_es_latest_script action="INSERT_OR_UPDATE"&gt;&lt;id&gt;c9fe37878366d214fc9154d6feaad336&lt;/id&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2024-12-23 09:35:02&lt;/sys_created_on&gt;&lt;sys_id&gt;c1cfb34b83a6d214fc9154d6feaad3f1&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2024-12-23 09:35:02&lt;/sys_updated_on&gt;&lt;table&gt;sysevent_script_action&lt;/table&gt;&lt;use_es_latest&gt;true&lt;/use_es_latest&gt;&lt;/sys_es_latest_script&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-908729451</payload_hash>
+        <record_name>Export in text file</record_name>
+        <reverted_from/>
+        <source>d9c7d1d183665250fc9154d6feaad3a4</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-23 10:14:26</sys_created_on>
+        <sys_id>dec8449783aad214fc9154d6feaad3c1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>193f302cb2e0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-23 10:14:26</sys_updated_on>
+        <type>Script Action</type>
+        <update_guid>56c8449707aad2148b1620cc9a2757c1</update_guid>
+        <update_guid_history>56c8449707aad2148b1620cc9a2757c1:-908729451,e2974c5bd46ad214530f25a8400c6477:-1622710411,2603c097b32ad21474341a32cb4e3255:-1600861119,a3c20497582ad214466389311a78725f:-1853364325,7f724c57212ad21446b70d88f47c0e15:-2038966610,87520c931b2ad2146945672e3042beb6:-815458385,fc224057212ad214b2dd9df5d78a4421:719804697,11cf7b8b38a6d2145e5a62655c6b42b2:54975784</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-24 21:46:19</sys_created_on>
+        <sys_db_object display_value="" name="sysevent_script_action">sysevent_script_action</sys_db_object>
+        <sys_id>2e9b4326836240c0a38fb262ffa35900</sys_id>
+        <sys_metadata>c9fe37878366d214fc9154d6feaad336</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Export in text file</sys_name>
+        <sys_package display_value="Disc shop" source="x_1461179_disk_sho">ee28f9b783161a50fc9154d6feaad3bd</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Disc shop">ee28f9b783161a50fc9154d6feaad3bd</sys_scope>
+        <sys_scope_delete display_value="">0fdb8dfa0cfa4d2c84d33507d7f9a971</sys_scope_delete>
+        <sys_update_name>sysevent_script_action_c9fe37878366d214fc9154d6feaad336</sys_update_name>
+        <sys_update_version display_value="sysevent_script_action_c9fe37878366d214fc9154d6feaad336">dec8449783aad214fc9154d6feaad3c1</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-24 21:46:19</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

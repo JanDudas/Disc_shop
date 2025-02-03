@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role">
+    <sys_security_acl_role action="DELETE">
+        <sys_class_name>sys_security_acl_role</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-13 22:55:39</sys_created_on>
+        <sys_id>ed60834e834b1e54fc9154d6feaad38d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_1461179_disk_sho_disc_audi.x_1461179_disk_sho.disc_audi_user</sys_name>
+        <sys_package display_value="Disc shop" source="x_1461179_disk_sho">ee28f9b783161a50fc9154d6feaad3bd</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Disc shop">ee28f9b783161a50fc9154d6feaad3bd</sys_scope>
+        <sys_security_acl display_value="x_1461179_disk_sho_disc_audi">6960834e834b1e54fc9154d6feaad38a</sys_security_acl>
+        <sys_update_name>sys_security_acl_role_ed60834e834b1e54fc9154d6feaad38d</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-13 22:55:39</sys_updated_on>
+        <sys_user_role display_value="x_1461179_disk_sho.disc_audi_user" name="x_1461179_disk_sho.disc_audi_user">15604382834b1e54fc9154d6feaad3f4</sys_user_role>
+    </sys_security_acl_role>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Disc shop">ee28f9b783161a50fc9154d6feaad3bd</application>
+        <file_path/>
+        <instance_id>e9ec096d1bdef1107d9d2f8dee4bcb4b</instance_id>
+        <instance_name>dev203221</instance_name>
+        <name>sys_security_acl_role_ed60834e834b1e54fc9154d6feaad38d</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role"><sys_security_acl_role action="INSERT_OR_UPDATE"><sys_class_name>sys_security_acl_role</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2025-01-13 22:55:39</sys_created_on><sys_id>ed60834e834b1e54fc9154d6feaad38d</sys_id><sys_mod_count>0</sys_mod_count><sys_name>x_1461179_disk_sho_disc_audi.x_1461179_disk_sho.disc_audi_user</sys_name><sys_package display_value="Disc shop" source="x_1461179_disk_sho">ee28f9b783161a50fc9154d6feaad3bd</sys_package><sys_policy/><sys_scope display_value="Disc shop">ee28f9b783161a50fc9154d6feaad3bd</sys_scope><sys_security_acl display_value="x_1461179_disk_sho_disc_audi">6960834e834b1e54fc9154d6feaad38a</sys_security_acl><sys_update_name>sys_security_acl_role_ed60834e834b1e54fc9154d6feaad38d</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-01-13 22:55:39</sys_updated_on><sys_user_role display_value="x_1461179_disk_sho.disc_audi_user" name="x_1461179_disk_sho.disc_audi_user">15604382834b1e54fc9154d6feaad3f4</sys_user_role></sys_security_acl_role></record_update>]]></payload>
+        <payload_hash>-1859609960</payload_hash>
+        <record_name>x_1461179_disk_sho_disc_audi.x_1461179_disk_sho.disc_audi_user</record_name>
+        <reverted_from/>
+        <source>78aa7677837e9250fc9154d6feaad36e</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-13 22:55:39</sys_created_on>
+        <sys_id>2160834e834b1e54fc9154d6feaad391</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19461e1416c0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-13 22:55:39</sys_updated_on>
+        <type>Access Roles</type>
+        <update_guid>2560834e494b1e5460a56255ecc6cd90</update_guid>
+        <update_guid_history>2560834e494b1e5460a56255ecc6cd90:-1859609960</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="x_1461179_disk_sho_disc_audi.x_1461179_disk_sho.disc_audi_user">38b343c683cb1e54fc9154d6feaad36d</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-13 23:10:05</sys_created_on>
+        <sys_db_object display_value="" name="sys_security_acl_role">sys_security_acl_role</sys_db_object>
+        <sys_id>0a5704e3420d4a48831b5ee04eed2464</sys_id>
+        <sys_metadata>ed60834e834b1e54fc9154d6feaad38d</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_1461179_disk_sho_disc_audi.x_1461179_disk_sho.disc_audi_user</sys_name>
+        <sys_package display_value="Disc shop" source="x_1461179_disk_sho">ee28f9b783161a50fc9154d6feaad3bd</sys_package>
+        <sys_parent display_value="">6960834e834b1e54fc9154d6feaad38a</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Disc shop">ee28f9b783161a50fc9154d6feaad3bd</sys_scope>
+        <sys_scope_delete display_value="">0fdb8dfa0cfa4d2c84d33507d7f9a971</sys_scope_delete>
+        <sys_update_name>sys_security_acl_role_ed60834e834b1e54fc9154d6feaad38d</sys_update_name>
+        <sys_update_version display_value="sys_security_acl_role_ed60834e834b1e54fc9154d6feaad38d">2160834e834b1e54fc9154d6feaad391</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-13 23:10:05</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

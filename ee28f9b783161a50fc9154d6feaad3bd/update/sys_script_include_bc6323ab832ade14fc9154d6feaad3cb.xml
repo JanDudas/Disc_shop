@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_1461179_disk_sho.getAttachmentRecord</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description/>
+        <mobile_callable>false</mobile_callable>
+        <name>getAttachmentRecord</name>
+        <sandbox_callable>false</sandbox_callable>
+        <script><![CDATA[// https://gist.github.com/thisnameissoclever/f9a00769d44da5f48ec259880679aa87
+
+function getAttachmentRecord(recordTable, idOfRecord, nameOfFile, exactMatch) {
+    var grAttachment = new GlideRecord('sys_attachment');
+
+    grAttachment.addQuery('table_name', recordTable);
+    grAttachment.addQuery('table_sys_id', idOfRecord);
+
+    if (nameOfFile && exactMatch) {
+        //If the file name is provided, and exactMatch is true
+        grAttachment.addQuery('file_name', nameOfFile);
+    } else if (nameOfFile) {
+        //If the file name is provided, but exactMatch is not, or is false
+        grAttachment.addQuery('file_name', 'STARTSWITH', nameOfFile);
+    }
+
+    //If multiple attachments match, get newest one
+    grAttachment.orderByDesc('sys_created_on');
+    grAttachment.setLimit(1); //Be more efficient
+    grAttachment.query();
+
+    if (grAttachment.next()) {
+        gs.info("JD:  bezi spravne script include nameOfFile " + nameOfFile);
+        return grAttachment;
+    }
+    gs.info("JD:  nebezi spravne script include" + nameOfFile);
+    gs.debug('Attachment for record on table ' +
+        recordTable + ' with sys_id ' + idOfRecord +
+        ' not found with the specified arguments.');
+
+    return false; //If attachment is not found, return false
+}]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-24 20:51:12</sys_created_on>
+        <sys_id>bc6323ab832ade14fc9154d6feaad3cb</sys_id>
+        <sys_mod_count>9</sys_mod_count>
+        <sys_name>getAttachmentRecord</sys_name>
+        <sys_package display_value="Disc shop" source="x_1461179_disk_sho">ee28f9b783161a50fc9154d6feaad3bd</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Disc shop">ee28f9b783161a50fc9154d6feaad3bd</sys_scope>
+        <sys_update_name>sys_script_include_bc6323ab832ade14fc9154d6feaad3cb</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-25 11:37:28</sys_updated_on>
+    </sys_script_include>
+    <sys_es_latest_script action="INSERT_OR_UPDATE">
+        <id>bc6323ab832ade14fc9154d6feaad3cb</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-24 20:51:10</sys_created_on>
+        <sys_id>cf14eba3836ade14fc9154d6feaad38a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-24 20:51:10</sys_updated_on>
+        <table>sys_script_include</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+</record_update>

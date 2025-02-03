@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="DELETE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description/>
+        <field>u_modell</field>
+        <global>true</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name>Disc Performance Options</name>
+        <order/>
+        <script><![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+    if (newValue === '') {
+        return;
+    }
+
+    var performance = g_form.getValue('u_performance');
+    g_form.clearOptions('u_performance');
+
+    switch (true) {
+        case (newValue == 0):
+            g_form.addOption('u_performance', 0, 'Select Model of the Car');
+            break;
+        case (newValue == 11 || newValue == 12):
+            g_form.addOption('u_performance', 1, '1.6  (56 kW)');
+            g_form.addOption('u_performance', 2, '1.9 TDi ( 62 kW )');
+            // (method) g_form.addOption(fieldName: string, choiceValue: string, choiceLabel: string): void
+            break;
+        case (newValue == 13 || newValue == 14):
+            g_form.addOption('u_performance', 1, '1.6  (56 kW)');
+            g_form.addOption('u_performance', 2, '1.9 TDi ( 62 kW )');
+            break;
+        case (newValue == 15):
+            g_form.addOption('u_performance', 3, '2.3 TDi (80 kW)');
+            g_form.addOption('u_performance', 4, '1.6 JTDM ( 110 kW )');
+            g_form.addOption('u_performance', 5, 'JTDM ( 130 kW )');
+            break;
+
+        case (newValue == 21 || newValue == 22 || newValue == 23):
+            g_form.addOption('u_performance', 7, '2JTS ( 122 kW )');
+            g_form.addOption('u_performance', 8, '2.4 JTD ( 130 kW)');
+            g_form.addOption('u_performance', 9, '2.6 JTVS (135 kW)');
+            break;
+
+        case (newValue == 24 || newValue == 25 || newValue == 26):
+            g_form.addOption('u_performance', 10, '2.8 V6 ( 100 kW )');
+            g_form.addOption('u_performance', 11, '1.8  MPI (103 kW )');
+            break;
+
+        case (newValue == 27):
+            g_form.addOption('u_performance', 11, '1.8  MPI (103 kW )');
+            break;
+        case (newValue == 31 || newValue == 32 || newValue == 33):
+            g_form.addOption('u_performance', 10, '2.8 V6 ( 100 kW )');
+            g_form.addOption('u_performance', 12, '1.9 JTS ( 118 kW)');
+            break;
+        case (newValue == 41 || newValue == 42 || newValue == 43):
+            g_form.addOption('u_performance', 8, '2.4 JTD ( 130 kW)');
+            g_form.addOption('u_performance', 10, '2.8 V6 ( 100 kW )');
+            g_form.addOption('u_performance', 12, '1.9 JTS ( 118 kW)');
+            break;
+
+        case (newValue == 51 || newValue == 52 || newValue == 53):
+            g_form.addOption('u_performance', 3, '2.3 TDi (80 kW)');
+            g_form.addOption('u_performance', 5, 'JTDM ( 130 kW )');
+            g_form.addOption('u_performance', 7, '2JTS ( 122 kW )');
+            break;
+        case (newValue == 61 || newValue == 62 || newValue == 63):
+            g_form.addOption('u_performance', 12, '1.9 JTS ( 118 kW)');
+            g_form.addOption('u_performance', 13, '1.4 TB ( 122 kW)');
+            g_form.addOption('u_performance', 14, '1.6 d (89 kW)');
+            break;
+        default:
+            alert("none disc model");
+            break;
+    }
+
+    if (isLoading && !g_form.isNewRecord()) {
+        // performance = g_form.getValue('u_performance');
+        // control, oldValue,  
+        g_form.setValue('u_performance', performance);
+    }
+
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-17 21:05:13</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>7923e75983e61650fc9154d6feaad3aa</sys_id>
+        <sys_mod_count>21</sys_mod_count>
+        <sys_name>Disc Performance Options</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Disc shop" source="x_1461179_disk_sho">ee28f9b783161a50fc9154d6feaad3bd</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Disc shop">ee28f9b783161a50fc9154d6feaad3bd</sys_scope>
+        <sys_update_name>sys_script_client_7923e75983e61650fc9154d6feaad3aa</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-16 10:06:20</sys_updated_on>
+        <table>x_1461179_disk_sho_disc</table>
+        <type>onChange</type>
+        <ui_type>0</ui_type>
+        <view/>
+    </sys_script_client>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Disc shop">ee28f9b783161a50fc9154d6feaad3bd</application>
+        <file_path/>
+        <instance_id>e9ec096d1bdef1107d9d2f8dee4bcb4b</instance_id>
+        <instance_name>dev203221</instance_name>
+        <name>sys_script_client_7923e75983e61650fc9154d6feaad3aa</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_script_client"&gt;&lt;sys_script_client action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;applies_extended&gt;false&lt;/applies_extended&gt;&lt;condition/&gt;&lt;description/&gt;&lt;field&gt;u_modell&lt;/field&gt;&lt;global&gt;true&lt;/global&gt;&lt;isolate_script&gt;true&lt;/isolate_script&gt;&lt;messages/&gt;&lt;name&gt;Disc Performance Options&lt;/name&gt;&lt;order/&gt;&lt;script&gt;&lt;![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+    if (newValue === '') {
+        return;
+    }
+
+    var performance = g_form.getValue('u_performance');
+    g_form.clearOptions('u_performance');
+
+    switch (true) {
+        case (newValue == 0):
+            g_form.addOption('u_performance', 0, 'Select Model of the Car');
+            break;
+        case (newValue == 11 || newValue == 12):
+            g_form.addOption('u_performance', 1, '1.6  (56 kW)');
+            g_form.addOption('u_performance', 2, '1.9 TDi ( 62 kW )');
+            // (method) g_form.addOption(fieldName: string, choiceValue: string, choiceLabel: string): void
+            break;
+        case (newValue == 13 || newValue == 14):
+            g_form.addOption('u_performance', 1, '1.6  (56 kW)');
+            g_form.addOption('u_performance', 2, '1.9 TDi ( 62 kW )');
+            break;
+        case (newValue == 15):
+            g_form.addOption('u_performance', 3, '2.3 TDi (80 kW)');
+            g_form.addOption('u_performance', 4, '1.6 JTDM ( 110 kW )');
+            g_form.addOption('u_performance', 5, 'JTDM ( 130 kW )');
+            break;
+
+        case (newValue == 21 || newValue == 22 || newValue == 23):
+            g_form.addOption('u_performance', 7, '2JTS ( 122 kW )');
+            g_form.addOption('u_performance', 8, '2.4 JTD ( 130 kW)');
+            g_form.addOption('u_performance', 9, '2.6 JTVS (135 kW)');
+            break;
+
+        case (newValue == 24 || newValue == 25 || newValue == 26):
+            g_form.addOption('u_performance', 10, '2.8 V6 ( 100 kW )');
+            g_form.addOption('u_performance', 11, '1.8  MPI (103 kW )');
+            break;
+
+        case (newValue == 27):
+            g_form.addOption('u_performance', 11, '1.8  MPI (103 kW )');
+            break;
+        case (newValue == 31 || newValue == 32 || newValue == 33):
+            g_form.addOption('u_performance', 10, '2.8 V6 ( 100 kW )');
+            g_form.addOption('u_performance', 12, '1.9 JTS ( 118 kW)');
+            break;
+        case (newValue == 41 || newValue == 42 || newValue == 43):
+            g_form.addOption('u_performance', 8, '2.4 JTD ( 130 kW)');
+            g_form.addOption('u_performance', 10, '2.8 V6 ( 100 kW )');
+            g_form.addOption('u_performance', 12, '1.9 JTS ( 118 kW)');
+            break;
+
+        case (newValue == 51 || newValue == 52 || newValue == 53):
+            g_form.addOption('u_performance', 3, '2.3 TDi (80 kW)');
+            g_form.addOption('u_performance', 5, 'JTDM ( 130 kW )');
+            g_form.addOption('u_performance', 7, '2JTS ( 122 kW )');
+            break;
+        case (newValue == 61 || newValue == 62 || newValue == 63):
+            g_form.addOption('u_performance', 12, '1.9 JTS ( 118 kW)');
+            g_form.addOption('u_performance', 13, '1.4 TB ( 122 kW)');
+            g_form.addOption('u_performance', 14, '1.6 d (89 kW)');
+            break;
+        default:
+            alert("none disc model");
+            break;
+    }
+
+    if (isLoading &amp;&amp; !g_form.isNewRecord()) {
+        // performance = g_form.getValue('u_performance');
+        // control, oldValue,  
+        g_form.setValue('u_performance', performance);
+    }
+
+}]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script_client&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2024-12-17 21:05:13&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;7923e75983e61650fc9154d6feaad3aa&lt;/sys_id&gt;&lt;sys_mod_count&gt;21&lt;/sys_mod_count&gt;&lt;sys_name&gt;Disc Performance Options&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="Disc shop" source="x_1461179_disk_sho"&gt;ee28f9b783161a50fc9154d6feaad3bd&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Disc shop"&gt;ee28f9b783161a50fc9154d6feaad3bd&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_client_7923e75983e61650fc9154d6feaad3aa&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-01-16 10:06:20&lt;/sys_updated_on&gt;&lt;table&gt;x_1461179_disk_sho_disc&lt;/table&gt;&lt;type&gt;onChange&lt;/type&gt;&lt;ui_type&gt;0&lt;/ui_type&gt;&lt;view/&gt;&lt;/sys_script_client&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>435477267</payload_hash>
+        <record_name>Disc Performance Options</record_name>
+        <reverted_from/>
+        <source>78aa7677837e9250fc9154d6feaad36e</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-16 10:06:20</sys_created_on>
+        <sys_id>9d1deff6838bd218fc9154d6feaad32e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1946e93fec10000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-16 10:06:20</sys_updated_on>
+        <type>Client Script</type>
+        <update_guid>991d2f76774bd218490c6a57d1e16629</update_guid>
+        <update_guid_history>991d2f76774bd218490c6a57d1e16629:435477267,385ce33eac4bd21862aec2f1d6eb93c3:869517355,07fbe37ae64bd2182475309c25a9eb46:-232587309,65cbe732e74bd218dc5e2df1b23aa2c5:1234302843,b9c73f45148b56d0609fb3141b078b11:0,47977fc11b8b56d0c7dd800432834da6:-464545033,e4b673c9304b56d0a7999ada7117a851:0,88b4b309710b56d0babf95289f49ef4f:-464545033,fc89344954cb12d05767faa83098854c:1931373163,57c53401d9cb12d095bd85e91139493c:-1185858643,5db5282c87cf9290c368f1aa2eedbe18:0,53aa7a77e87e92505fe192e56d75223a:-1479867124,70170f355daa1290ef89871840693d95:422246784,7f86cf39452a129008e01c72a90fcf7b:1408376315,1b46c3bd176a12902b9f377ddd11afbb:-923056164,349f8f6d3ca69a505500891cd6174c57:909590537,f94ecfe15fe69a50e93d1e6f998b51c4:-1185404697,ad8d4f2dcfa69a50b53cdd445aadbd9b:-468444664,0ddccfe58da69a5037be1a27c3a33ae6:-1040026303,26c58721af269a50630143b3b83d4d61:1686589692,3da58be594e29a500dd32cb45d7acd49:-1309803716,59aa7a693d229a50aa7ed840cf6fa915:375052796,e36836e168ee5a5037d076f907a7312a:1375103581,12beaf19db2e1650ef5e521c2d819d53:-1168913092,ebbda3d5522e165070c8a3586b6a6859:-163659901,0317ab9ddd6a16508b769c991e372988:-858943987,2e45ef5d766a1650a3bc01c028916b63:-182952756,2034ef596d6a1650a3a44966bcbbcfbf:-1218025518</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-16 14:24:57</sys_created_on>
+        <sys_db_object display_value="" name="sys_script_client">sys_script_client</sys_db_object>
+        <sys_id>28446be662b640469c6906096c6b9964</sys_id>
+        <sys_metadata>7923e75983e61650fc9154d6feaad3aa</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Disc Performance Options</sys_name>
+        <sys_package display_value="Disc shop" source="x_1461179_disk_sho">ee28f9b783161a50fc9154d6feaad3bd</sys_package>
+        <sys_parent display_value="disc">7de5957483e21610fc9154d6feaad3ae</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Disc shop">ee28f9b783161a50fc9154d6feaad3bd</sys_scope>
+        <sys_scope_delete display_value="">0fdb8dfa0cfa4d2c84d33507d7f9a971</sys_scope_delete>
+        <sys_update_name>sys_script_client_7923e75983e61650fc9154d6feaad3aa</sys_update_name>
+        <sys_update_version display_value="sys_script_client_7923e75983e61650fc9154d6feaad3aa">9d1deff6838bd218fc9154d6feaad32e</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-16 14:24:57</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

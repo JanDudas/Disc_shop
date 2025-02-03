@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="DELETE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description/>
+        <field>u_requestcount</field>
+        <global>true</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name>ReqCount BMW Discs </name>
+        <order/>
+        <script><![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+    if (newValue === '') {
+        return;
+    }
+    var priceAllPieces = g_form.getIntValue('u_priceallpcs');
+    g_form.clearOptions('u_priceallpcs');
+
+    // var requestedCount = g_form.getIntValue('u_requestcount');
+    var five = 5;
+    var priceOfOneValue = g_form.getIntValue('u_price');
+    var priceOfOnelabel = priceOfOneValue * five;
+    var value = priceOfOnelabel * newValue;
+
+    var allCount = g_form.getIntValue('u_count'); // 20 
+    var restCount = allCount - newValue;
+
+    if (restCount < 0) {
+        g_form.addErrorMessage('JD restCount is zero or negative ' + restCount + ' Stop action.');
+        return;
+    }
+
+    g_form.setValue('u_count', restCount);
+
+    var lastValue = newValue;
+
+    // g_form.addErrorMessage('JD priceOfOne je ' + priceOfOneValue);
+    // g_form.addErrorMessage('JD newValue je ' + newValue);
+    // g_form.addErrorMessage('JD label je ' + priceOfOnelabel);
+    // g_form.addErrorMessage('JD hod je ' + hod);
+
+    g_form.setValue('u_priceallpcs', value);
+
+
+    if (isLoading && !g_form.isNewRecord()) {
+        g_form.setValue('u_priceallpcs', priceAllPieces);
+        g_form.setValue('u_count', allCount);
+    }
+
+    //Type appropriate comment here, and begin script below
+
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-14 09:28:50</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>36bd0112830fd294fc9154d6feaad382</sys_id>
+        <sys_mod_count>42</sys_mod_count>
+        <sys_name>ReqCount BMW Discs </sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Disc shop" source="x_1461179_disk_sho">ee28f9b783161a50fc9154d6feaad3bd</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Disc shop">ee28f9b783161a50fc9154d6feaad3bd</sys_scope>
+        <sys_update_name>sys_script_client_36bd0112830fd294fc9154d6feaad382</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-14 15:23:01</sys_updated_on>
+        <table>x_1461179_disk_sho_disc_bmw</table>
+        <type>onChange</type>
+        <ui_type>0</ui_type>
+        <view/>
+    </sys_script_client>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Disc shop">ee28f9b783161a50fc9154d6feaad3bd</application>
+        <file_path/>
+        <instance_id>e9ec096d1bdef1107d9d2f8dee4bcb4b</instance_id>
+        <instance_name>dev203221</instance_name>
+        <name>sys_script_client_36bd0112830fd294fc9154d6feaad382</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_script_client"&gt;&lt;sys_script_client action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;applies_extended&gt;false&lt;/applies_extended&gt;&lt;condition/&gt;&lt;description/&gt;&lt;field&gt;u_requestcount&lt;/field&gt;&lt;global&gt;true&lt;/global&gt;&lt;isolate_script&gt;true&lt;/isolate_script&gt;&lt;messages/&gt;&lt;name&gt;ReqCount BMW Discs &lt;/name&gt;&lt;order/&gt;&lt;script&gt;&lt;![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+    if (newValue === '') {
+        return;
+    }
+    var priceAllPieces = g_form.getIntValue('u_priceallpcs');
+    g_form.clearOptions('u_priceallpcs');
+
+    // var requestedCount = g_form.getIntValue('u_requestcount');
+    var five = 5;
+    var priceOfOneValue = g_form.getIntValue('u_price');
+    var priceOfOnelabel = priceOfOneValue * five;
+    var value = priceOfOnelabel * newValue;
+
+    var allCount = g_form.getIntValue('u_count'); // 20 
+    var restCount = allCount - newValue;
+
+    if (restCount &lt; 0) {
+        g_form.addErrorMessage('JD restCount is zero or negative ' + restCount + ' Stop action.');
+        return;
+    }
+
+    g_form.setValue('u_count', restCount);
+
+    var lastValue = newValue;
+
+    // g_form.addErrorMessage('JD priceOfOne je ' + priceOfOneValue);
+    // g_form.addErrorMessage('JD newValue je ' + newValue);
+    // g_form.addErrorMessage('JD label je ' + priceOfOnelabel);
+    // g_form.addErrorMessage('JD hod je ' + hod);
+
+    g_form.setValue('u_priceallpcs', value);
+
+
+    if (isLoading &amp;&amp; !g_form.isNewRecord()) {
+        g_form.setValue('u_priceallpcs', priceAllPieces);
+        g_form.setValue('u_count', allCount);
+    }
+
+    //Type appropriate comment here, and begin script below
+
+}]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script_client&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-01-14 09:28:50&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;36bd0112830fd294fc9154d6feaad382&lt;/sys_id&gt;&lt;sys_mod_count&gt;42&lt;/sys_mod_count&gt;&lt;sys_name&gt;ReqCount BMW Discs &lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="Disc shop" source="x_1461179_disk_sho"&gt;ee28f9b783161a50fc9154d6feaad3bd&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Disc shop"&gt;ee28f9b783161a50fc9154d6feaad3bd&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_client_36bd0112830fd294fc9154d6feaad382&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-01-14 15:23:01&lt;/sys_updated_on&gt;&lt;table&gt;x_1461179_disk_sho_disc_bmw&lt;/table&gt;&lt;type&gt;onChange&lt;/type&gt;&lt;ui_type&gt;0&lt;/ui_type&gt;&lt;view/&gt;&lt;/sys_script_client&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>601648002</payload_hash>
+        <record_name>ReqCount BMW Discs </record_name>
+        <reverted_from/>
+        <source>78aa7677837e9250fc9154d6feaad36e</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-14 15:23:01</sys_created_on>
+        <sys_id>f062a61683cbd694fc9154d6feaad394</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1946569378d0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-14 15:23:01</sys_updated_on>
+        <type>Client Script</type>
+        <update_guid>3862a61633cbd69483e73fe6487e7193</update_guid>
+        <update_guid_history>3862a61633cbd69483e73fe6487e7193:601648002,9c1fdad28b0bd694ff329a86606cfa22:905068229,f7199a960d07d694078e7d9e16b7f7ae:593220246,147316daaa03d6948cc57ac64069853a:1356059925,9e521e92080f9694e63e7f907b4f2f2b:1758503969,dbc01e96248f9694d7f325ad6881e00e:264632292,995ac65a604b9694d9095eb80eefecbb:1260388542,dc79c6d23c4b96940e61859d064354af:400993111,c7d846963dc79694161d7363d72a0626:-91976678,9ba78e9ae04796943790562945d44cd5:1825349946,b744ce9e72079694a0acf15433be4594:-977384442,491c311e820f56944f117694a9030ea0:814116274,f537719e318b5694187750b0f534e5b1:723116826,5f76bdd6968b5694b5b28e94d87548fa:-553343289,68367592910b5694244cdaacaff4767d:840794901,93a5b912aa8b5694a74ea10596add4e7:1358101583,e074f19a5e0b56948eb9c77b1cf7eba4:1214794222,aa81f15a1b87569456b3377f716cad03:-1049189713,e22135529a475694cc728f2f80e0dd8f:-609717826,d8e0b912b3475694073dde46bb3d4b38:-1164126377,7e5f61925d0756948db486e171e4051c:-236087684,b72fa55e3b075694190788e85da33ea1:-977187552,07aee1961707569407ee96469e08fb66:-713121517,977e6d5e99c3569463c85dda0ab1e155:2021243159,47fde91e12c356943de57d699724529e:-565584690,e6ad6516c1c356947717dd33747fa289:-1516182218,1d3d61924ac35694b1c93b271de843ab:871120488,116bed561f43569493a310bfeb4d7954:-1176761752,93b9a51ea7cf169491e28a24a42131b8:105751753,763761d202cf169428f01a3d3aec2941:1122953729,e7c6e55efb8f169492d0a0220211176e:1147919849,1796edd2a18f169428a8ff4f4fa0ef7b:-1958815084,ffd321d2a00f16943432fc7a3ae4a624:1260857106,8f73e19218cb1694bacc3eff49ff107d:-484093630,a103ad5a6acb1694326fff32ebb55988:1558619622,3f2bd9decb471694aff62afc9b442e57:1685781756,ff89919a130716943352f14e39f8e9ed:497577504,6c48959205c3169440f778865d5b1c30:-269678562,2e259dde4b431694336b67f4459605fd:-181064446,dfe39116180316944b713010127f5cf2:-1997403722,8fb29d1e274fd2946947e0db4a643f5e:1361430791,1e62dd9a20cfd29477adcbb646eab2ec:-1997403722,e051d99af58fd294693465e2de32af09:1756128928</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-16 09:45:03</sys_created_on>
+        <sys_db_object display_value="" name="sys_script_client">sys_script_client</sys_db_object>
+        <sys_id>a11b537ebd5a48efbbe5010c3bdd2b01</sys_id>
+        <sys_metadata>36bd0112830fd294fc9154d6feaad382</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>ReqCount BMW Discs </sys_name>
+        <sys_package display_value="Disc shop" source="x_1461179_disk_sho">ee28f9b783161a50fc9154d6feaad3bd</sys_package>
+        <sys_parent display_value="disc_BMW_admin">09b864c9838712d0fc9154d6feaad324</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Disc shop">ee28f9b783161a50fc9154d6feaad3bd</sys_scope>
+        <sys_scope_delete display_value="">0fdb8dfa0cfa4d2c84d33507d7f9a971</sys_scope_delete>
+        <sys_update_name>sys_script_client_36bd0112830fd294fc9154d6feaad382</sys_update_name>
+        <sys_update_version display_value="sys_script_client_36bd0112830fd294fc9154d6feaad382">f062a61683cbd694fc9154d6feaad394</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-16 09:45:03</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
